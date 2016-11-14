@@ -20,6 +20,14 @@ public class Recipe implements Item{
 		return cost;
 	}
 	
+	@Override
+	public void consumeIngredients() {
+		for (Ingredient in : getIngredients()) {
+			in.setQty(in.getQty() - 1);
+		}
+	}
+
+	
 	public List<String> getInstructions(){
 		List<String> instructions = new ArrayList<String>();
 		

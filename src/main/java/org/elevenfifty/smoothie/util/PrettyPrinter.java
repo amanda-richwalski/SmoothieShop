@@ -21,10 +21,10 @@ public final class PrettyPrinter {
 	}
 
 	public static void print(Item item) {
-		out.println(item.getName());
-		out.println(printPretty("Ingredients:", item.getIngredients()));
-		out.println(printPretty("Instructions:", item.getInstructions()));
-		out.println(item.getCost());
+		System.out.println(item.getName());
+		System.out.println(printPretty("Ingredients:", item.getIngredients()));
+		System.out.println(printPretty("Instructions:", item.getInstructions()));
+		System.out.println(item.getCost());
 	}
 }
 

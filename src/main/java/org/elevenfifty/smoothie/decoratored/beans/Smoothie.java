@@ -45,6 +45,14 @@ public class Smoothie implements Item {
 
 		return cost;
 	}
+	
+	@Override
+	public void consumeIngredients() {
+		for (Ingredient in : getIngredients()) {
+			in.setQty(in.getQty() - 1);
+		}
+	}
+
 
 	public List<Ingredient> getIngredients() {
 		List<Ingredient> list;
